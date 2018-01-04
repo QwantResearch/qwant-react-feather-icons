@@ -38,3 +38,19 @@ class MyClass extends Component {
   }
 }
 ```
+
+### Props
+
+color: PropTypes.string
+size: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+
+
+##### Special props
+
+###### Chevron
+
+direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired
+
+###### All
+
+active: PropTypes.bool
