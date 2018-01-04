@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Globe = ({ color, size, ...props }) => (
+const Videos = ({ color, size, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -14,20 +14,19 @@ const Globe = ({ color, size, ...props }) => (
     strokeLinejoin="round"
     {...props}
   >
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" y1="12" x2="22" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    <polygon points="23 7 16 12 23 17 23 7" />
+    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
   </svg>
 )
 
-Globe.propTypes = {
+Videos.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
-Globe.defaultProps = {
+Videos.defaultProps = {
   color: 'currentColor',
   size: '24',
 }
 
-export default Globe
+export default Videos

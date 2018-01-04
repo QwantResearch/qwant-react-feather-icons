@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Globe = ({ color, size, ...props }) => (
+const All = ({ color, size, active, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -14,20 +14,22 @@ const Globe = ({ color, size, ...props }) => (
     strokeLinejoin="round"
     {...props}
   >
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" y1="12" x2="22" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    <line x1="4" y1="21" x2="4" y2="3" stroke={active ? '#0fbd2b' : color} />
+    <line x1="12" y1="21" x2="12" y2="3" stroke={active ? '#ff7800' : color} />
+    <line x1="20" y1="21" x2="20" y2="3" stroke={active ? '#1f99f5' : color} />
   </svg>
 )
 
-Globe.propTypes = {
+All.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  active: PropTypes.bool,
 }
 
-Globe.defaultProps = {
+All.defaultProps = {
   color: 'currentColor',
   size: '24',
+  active: false,
 }
 
-export default Globe
+export default All
