@@ -1,7 +1,15 @@
 ## Qwant React Feather Icons
 
 ### Installation
-  // TODO
+
+Add the line below to your `package.json` on `dependencies` section:
+
+```json
+"dependencies": {
+  ...
+  "qwant-react-feather-icons": "git+https://github.com/QwantResearch/qwant-react-feather-icons.git"
+}
+```
 
 ### Icons available
 
@@ -25,7 +33,7 @@ All,
 
 ```javascript
 import React, { Component } from 'react'
-import * as Icons from 'qwant-react-feather-icons'
+import * as Icon from 'qwant-react-feather-icons'
 
 class MyClass extends Component {
   render() {
