@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import getDefaultSVGProps from '../constants/props'
+
 const renderFromDirection = (direction) => {
   switch (direction) {
     case 'up':
@@ -17,18 +19,7 @@ const renderFromDirection = (direction) => {
 }
 
 const Chevron = ({ color, size, direction, ...props }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
+  <svg {...getDefaultSVGProps(color, size)} {...props}>
     {renderFromDirection(direction)}
   </svg>
 )
