@@ -5,7 +5,7 @@ const getDefaultSVGProps = (color, size) => ({
   },
   width: size,
   height: size,
-  viewBox: '0 0 24 24',
+  viewBox: `0 0 ${size} ${size}`,
   fill: 'none',
   stroke: color,
   strokeWidth: '2',
