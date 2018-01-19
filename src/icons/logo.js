@@ -7,7 +7,7 @@ const Logo = ({ color, size, ...props }) => (
     style={{ flexShrink: 0 }}
     width={size}
     height={size}
-    viewBox={`0 0 ${size} ${size}`}
+    viewBox="0 0 45 45"
     {...props}
   >
     <defs>

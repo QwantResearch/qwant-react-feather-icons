@@ -1,6 +1,6 @@
 {
   "name": "qwant-react-feather-icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React component for Qwant Feather icons",
   "main": "build/index.js",
   "scripts": {
