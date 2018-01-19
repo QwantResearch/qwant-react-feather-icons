@@ -11,6 +11,7 @@ import Globe from './icons/globe'
 import Cross from './icons/cross'
 import Chevron from './icons/chevron'
 import All from './icons/all'
+import Logo from './icons/logo'
 
 export {
   Videos,
@@ -26,4 +27,5 @@ export {
   Cross,
   Chevron,
   All,
+  Logo,
 }
