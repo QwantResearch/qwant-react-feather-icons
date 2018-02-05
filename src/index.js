@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import All from './icons/all'
@@ -17,20 +18,20 @@ import Web from './icons/web'
 
 const Icon = ({ name }) => {
   switch (name) {
-    case 'all': return All
-    case 'chevron': return Chevron
-    case 'cross': return Cross
-    case 'images': return Images
-    case 'list': return List
-    case 'logo': return Logo
-    case 'music': return Music
-    case 'news': return News
-    case 'search': return Search
-    case 'settings': return Settings
-    case 'shopping': return Shopping
-    case 'social': return Social
-    case 'videos': return Videos
-    case 'web': return Web
+    case 'all': return <All />
+    case 'chevron': return <Chevron />
+    case 'cross': return <Cross />
+    case 'images': return <Images />
+    case 'list': return <List />
+    case 'logo': return <Logo />
+    case 'music': return <Music />
+    case 'news': return <News />
+    case 'search': return <Search />
+    case 'settings': return <Settings />
+    case 'shopping': return <Shopping />
+    case 'social': return <Social />
+    case 'videos': return <Videos />
+    case 'web': return <Web />
     default: return false
   }
 }
@@ -51,7 +52,7 @@ Icon.propTypes = {
     'social',
     'videos',
     'web',
-  ]),
+  ]).isRequired,
 }
 
 export default Icon
