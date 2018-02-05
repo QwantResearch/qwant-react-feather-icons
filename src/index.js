@@ -16,22 +16,22 @@ import Social from './icons/social'
 import Videos from './icons/videos'
 import Web from './icons/web'
 
-const Icon = ({ name }) => {
+const Icon = ({ name, ...props }) => {
   switch (name) {
-    case 'all': return <All />
-    case 'chevron': return <Chevron />
-    case 'cross': return <Cross />
-    case 'images': return <Images />
-    case 'list': return <List />
-    case 'logo': return <Logo />
-    case 'music': return <Music />
-    case 'news': return <News />
-    case 'search': return <Search />
-    case 'settings': return <Settings />
-    case 'shopping': return <Shopping />
-    case 'social': return <Social />
-    case 'videos': return <Videos />
-    case 'web': return <Web />
+    case 'all': return <All {...props} />
+    case 'chevron': return <Chevron {...props} />
+    case 'cross': return <Cross {...props} />
+    case 'images': return <Images {...props} />
+    case 'list': return <List {...props} />
+    case 'logo': return <Logo {...props} />
+    case 'music': return <Music {...props} />
+    case 'news': return <News {...props} />
+    case 'search': return <Search {...props} />
+    case 'settings': return <Settings {...props} />
+    case 'shopping': return <Shopping {...props} />
+    case 'social': return <Social {...props} />
+    case 'videos': return <Videos {...props} />
+    case 'web': return <Web {...props} />
     default: return false
   }
 }
