@@ -1,6 +1,7 @@
+import { createElement } from 'react'
 import PropTypes from 'prop-types'
 
-const Icon = ({ name }) => require(`./icons/${name}`)
+const Icon = ({ name }) => createElement(require(`./icons/${name}`))
 
 Icon.propTypes = {
   name: PropTypes.oneOf([
