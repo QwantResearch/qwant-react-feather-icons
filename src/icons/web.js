@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import getDefaultSVGProps from '../constants/props'
 
-const Globe = ({ color, size, ...props }) => (
+const Web = ({ color, size, ...props }) => (
   <svg {...getDefaultSVGProps(color, size)} {...props}>
     <circle cx="12" cy="12" r="10" />
     <line x1="2" y1="12" x2="22" y2="12" />
@@ -11,14 +11,14 @@ const Globe = ({ color, size, ...props }) => (
   </svg>
 )
 
-Globe.propTypes = {
+Web.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
-Globe.defaultProps = {
+Web.defaultProps = {
   color: 'currentColor',
   size: '24',
 }
 
-export default Globe
+export default Web
