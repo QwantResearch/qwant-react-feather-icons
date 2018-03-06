@@ -1,2 +1,4 @@
-bin
+src
 .babelrc
+.eslintrc
+*.js.map

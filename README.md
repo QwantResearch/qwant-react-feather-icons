@@ -2,43 +2,21 @@
 
 ### Installation
 
-Add the line below to your `package.json` on `dependencies` section:
-
-```json
-"dependencies": {
-  ...
-  "qwant-react-feather-icons": "git+https://github.com/QwantResearch/qwant-react-feather-icons.git"
-}
-```
-
-### Icons available
-
-```
-Videos,
-Social,
-Shopping,
-Settings,
-Search,
-News,
-Music,
-List,
-Image,
-Globe,
-Cross,
-Chevron,
-All,
+```bash
+yarn add @qwant/react-feather-icons
 ```
 
 ### Usage
 
 ```javascript
 import React, { Component } from 'react'
-import * as Icon from 'qwant-react-feather-icons'
+import Icon from '@qwant/react-feather-icons'
 
 class MyClass extends Component {
   render() {
     return (
-      <Icon.Search
+      <Icon
+        name="search"
         color="red"
         size={48}
       />
@@ -49,13 +27,14 @@ class MyClass extends Component {
 
 ### Props
 
+ - **name:** PropTypes.oneOf(['all', 'chevron', 'cross', 'images', 'list', 'logo', 'music', 'news', 'search', 'settings', 'shopping', 'social', 'videos', 'web']).isRequired
  - **color:** PropTypes.string
  - **size:** PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 
-###### Chevron
+###### chevron
 
  - **direction:** PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired
 
-###### All
+###### all
 
  - **active:** PropTypes.bool
