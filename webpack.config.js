@@ -1,19 +1,33 @@
 const path = require('path')
 
+const { NODE_ENV } = process.env
+
+const resolve = pathname => path.resolve(__dirname, pathname)
+const nodeModule = name => require.resolve(name)
+
 module.exports = {
-  devtool: 'cheap-module-source-map',
-  entry: path.resolve(__dirname, './src/index.js'),
+  devtool: Object.is(NODE_ENV, 'development') ? 'cheap-module-source-map' : false,
+  stats: { children: false },
+  context: resolve('src'),
+  entry: {
+    main: resolve('src/index.js'),
+    vendor: [nodeModule('react'), nodeModule('react-dom')],
+  },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'index.js',
+    path: resolve('dist'),
+    filename: '[name].js',
     libraryTarget: 'commonjs2',
+  },
+  resolve: {
+    modules: [resolve('node_modules')],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
-      include: path.resolve(__dirname, 'src'),
+      include: resolve('src'),
       exclude: /(node_modules|bower_components|build)/,
-      use: require.resolve('babel-loader'),
+      use: nodeModule('babel-loader'),
     }],
   },
   externals: {

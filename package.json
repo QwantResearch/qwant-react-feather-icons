@@ -1,15 +1,15 @@
 {
   "name": "@qwant/react-feather-icons",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "React component for Qwant Feather icons",
-  "main": "build/index.js",
+  "main": "dist/main.js",
   "scripts": {
     "prestart": "yarn link",
     "start": "webpack --watch",
     "build": "webpack -p",
     "lint": "eslint src/**; exit 0",
     "prepare": "npm run build",
-    "clean": "rm -Rvf build"
+    "clean": "rm -Rvf dist"
   },
   "repository": {
     "type": "git",
@@ -30,13 +30,16 @@
     "url": "https://github.com/QwantResearch/qwant-react-feather-icons/issues"
   },
   "homepage": "https://github.com/QwantResearch/qwant-react-feather-icons#readme",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-dynamic-import-webpack": "^1.0.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
